@@ -1,4 +1,4 @@
-"""Stub implementations of assessment.authoring objects."""
+"""GStudio implementations of assessment.authoring objects."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -15,13 +15,13 @@ import importlib
 from . import default_mdata
 from .. import utilities
 from ...abstract_osid.assessment_authoring import objects as abc_assessment_authoring_objects
+from ..osid import markers as osid_markers
+from ..osid import objects as osid_objects
 from ..osid.metadata import Metadata
 from ..primitives import Id
 from ..utilities import get_registry
 from ..utilities import update_display_text_defaults
 from dlkit.abstract_osid.osid import errors
-from dlkit.gstudio.osid import markers as osid_markers
-from dlkit.gstudio.osid import objects as osid_objects
 from dlkit.primordium.id.primitives import Id
 
 
@@ -235,7 +235,10 @@ class AssessmentPartForm(abc_assessment_authoring_objects.AssessmentPartForm, os
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['weight'])
+        # metadata.update({'existing_weight_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     weight_metadata = property(fget=get_weight_metadata)
 
@@ -270,7 +273,10 @@ class AssessmentPartForm(abc_assessment_authoring_objects.AssessmentPartForm, os
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['allocated_time'])
+        # metadata.update({'existing_allocated_time_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     allocated_time_metadata = property(fget=get_allocated_time_metadata)
 

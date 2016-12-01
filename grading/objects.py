@@ -1,4 +1,4 @@
-"""Stub implementations of grading objects."""
+"""GStudio implementations of grading objects."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -22,6 +22,8 @@ from decimal import Decimal
 from . import default_mdata
 from .. import utilities
 from ...abstract_osid.grading import objects as abc_grading_objects
+from ..osid import markers as osid_markers
+from ..osid import objects as osid_objects
 from ..osid.metadata import Metadata
 from ..primitives import Id
 from ..resource.simple_agent import Agent
@@ -29,8 +31,6 @@ from ..utilities import get_registry
 from ..utilities import now_map
 from ..utilities import update_display_text_defaults
 from dlkit.abstract_osid.osid import errors
-from dlkit.gstudio.osid import markers as osid_markers
-from dlkit.gstudio.osid import objects as osid_objects
 from dlkit.primordium.calendaring.primitives import DateTime
 from dlkit.primordium.id.primitives import Id
 
@@ -182,7 +182,10 @@ class GradeForm(abc_grading_objects.GradeForm, osid_objects.OsidObjectForm, osid
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['input_score_start_range'])
+        # metadata.update({'existing_input_score_start_range_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     input_score_start_range_metadata = property(fget=get_input_score_start_range_metadata)
 
@@ -231,7 +234,10 @@ class GradeForm(abc_grading_objects.GradeForm, osid_objects.OsidObjectForm, osid
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['input_score_end_range'])
+        # metadata.update({'existing_input_score_end_range_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     input_score_end_range_metadata = property(fget=get_input_score_end_range_metadata)
 
@@ -280,7 +286,10 @@ class GradeForm(abc_grading_objects.GradeForm, osid_objects.OsidObjectForm, osid
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['output_score'])
+        # metadata.update({'existing_output_score_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     output_score_metadata = property(fget=get_output_score_metadata)
 
@@ -566,7 +575,10 @@ class GradeSystemForm(abc_grading_objects.GradeSystemForm, osid_objects.OsidObje
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['based_on_grades'])
+        # metadata.update({'existing_based_on_grades_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     based_on_grades_metadata = property(fget=get_based_on_grades_metadata)
 
@@ -601,7 +613,10 @@ class GradeSystemForm(abc_grading_objects.GradeSystemForm, osid_objects.OsidObje
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['lowest_numeric_score'])
+        # metadata.update({'existing_lowest_numeric_score_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     lowest_numeric_score_metadata = property(fget=get_lowest_numeric_score_metadata)
 
@@ -649,7 +664,10 @@ class GradeSystemForm(abc_grading_objects.GradeSystemForm, osid_objects.OsidObje
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['numeric_score_increment'])
+        # metadata.update({'existing_numeric_score_increment_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     numeric_score_increment_metadata = property(fget=get_numeric_score_increment_metadata)
 
@@ -697,7 +715,10 @@ class GradeSystemForm(abc_grading_objects.GradeSystemForm, osid_objects.OsidObje
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['highest_numeric_score'])
+        # metadata.update({'existing_highest_numeric_score_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     highest_numeric_score_metadata = property(fget=get_highest_numeric_score_metadata)
 
@@ -1168,7 +1189,10 @@ class GradeEntryForm(abc_grading_objects.GradeEntryForm, osid_objects.OsidRelati
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['ignored_for_calculations'])
+        # metadata.update({'existing_ignored_for_calculations_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     ignored_for_calculations_metadata = property(fget=get_ignored_for_calculations_metadata)
 
@@ -1203,7 +1227,10 @@ class GradeEntryForm(abc_grading_objects.GradeEntryForm, osid_objects.OsidRelati
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['grade'])
+        # metadata.update({'existing_grade_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     grade_metadata = property(fget=get_grade_metadata)
 
@@ -1258,7 +1285,10 @@ class GradeEntryForm(abc_grading_objects.GradeEntryForm, osid_objects.OsidRelati
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['score'])
+        # metadata.update({'existing_score_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     score_metadata = property(fget=get_score_metadata)
 
@@ -1481,7 +1511,10 @@ class GradebookColumnForm(abc_grading_objects.GradebookColumnForm, osid_objects.
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['grade_system'])
+        # metadata.update({'existing_grade_system_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     grade_system_metadata = property(fget=get_grade_system_metadata)
 

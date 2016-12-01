@@ -1,4 +1,4 @@
-"""Stub implementations of osid objects."""
+"""GStudio implementations of osid objects."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -19,13 +19,13 @@ from pymongo.cursor import Cursor
 from . import default_mdata
 from .. import utilities
 from ...abstract_osid.osid import objects as abc_osid_objects
+from ..osid import markers as osid_markers
 from ..primitives import Id
 from ..utilities import OsidListList
 from ..utilities import get_locale_with_proxy
 from ..utilities import update_display_text_defaults
 from .metadata import Metadata
 from dlkit.abstract_osid.osid import errors
-from dlkit.gstudio.osid import markers as osid_markers
 from dlkit.primordium.id.primitives import Id
 from dlkit.primordium.type.primitives import Type
 

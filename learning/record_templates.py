@@ -1,4 +1,4 @@
-"""Stub implementations of learning records."""
+"""GStudio implementations of learning records."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -9,7 +9,7 @@
 
 from .. import utilities
 from ...abstract_osid.learning import records as abc_learning_records
-from dlkit.gstudio.osid import records as osid_records
+from ..osid import records as osid_records
 
 
 

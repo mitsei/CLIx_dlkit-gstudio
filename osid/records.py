@@ -1,4 +1,4 @@
-"""Stub implementations of osid records."""
+"""GStudio implementations of osid records."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification

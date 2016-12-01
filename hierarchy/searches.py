@@ -1,4 +1,4 @@
-"""Stub implementations of hierarchy searches."""
+"""GStudio implementations of hierarchy searches."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -9,7 +9,7 @@
 
 from .. import utilities
 from ...abstract_osid.hierarchy import searches as abc_hierarchy_searches
-from dlkit.gstudio.osid import searches as osid_searches
+from ..osid import searches as osid_searches
 
 
 

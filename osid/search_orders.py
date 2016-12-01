@@ -1,4 +1,4 @@
-"""Stub implementations of osid search_orders."""
+"""GStudio implementations of osid search_orders."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -9,8 +9,8 @@
 
 from .. import utilities
 from ...abstract_osid.osid import search_orders as abc_osid_search_orders
+from ..osid import markers as osid_markers
 from dlkit.abstract_osid.osid import errors
-from dlkit.gstudio.osid import markers as osid_markers
 
 
 

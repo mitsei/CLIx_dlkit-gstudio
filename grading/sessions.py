@@ -1,4 +1,4 @@
-"""Stub implementations of grading sessions."""
+"""GStudio implementations of grading sessions."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -9,12 +9,12 @@
 
 from .. import utilities
 from ...abstract_osid.grading import sessions as abc_grading_sessions
+from ..osid import sessions as osid_sessions
 from ..osid.sessions import OsidSession
 from .objects import GradebookColumnSummary
 from dlkit.abstract_osid.id.primitives import Id as ABCId
 from dlkit.abstract_osid.osid import errors
 from dlkit.abstract_osid.type.primitives import Type as ABCType
-from dlkit.gstudio.osid import sessions as osid_sessions
 
 
 

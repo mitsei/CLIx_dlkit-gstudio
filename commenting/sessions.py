@@ -1,4 +1,4 @@
-"""Stub implementations of commenting sessions."""
+"""GStudio implementations of commenting sessions."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -9,9 +9,9 @@
 
 from .. import utilities
 from ...abstract_osid.commenting import sessions as abc_commenting_sessions
+from ..osid import sessions as osid_sessions
 from ..osid.sessions import OsidSession
 from dlkit.abstract_osid.osid import errors
-from dlkit.gstudio.osid import sessions as osid_sessions
 
 
 

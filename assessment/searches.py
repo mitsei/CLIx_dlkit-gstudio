@@ -1,4 +1,4 @@
-"""Stub implementations of assessment searches."""
+"""GStudio implementations of assessment searches."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -9,7 +9,7 @@
 
 from .. import utilities
 from ...abstract_osid.assessment import searches as abc_assessment_searches
-from dlkit.gstudio.osid import searches as osid_searches
+from ..osid import searches as osid_searches
 
 
 

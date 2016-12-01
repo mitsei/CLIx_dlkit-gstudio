@@ -1,4 +1,4 @@
-"""Stub implementations of authorization sessions."""
+"""GStudio implementations of authorization sessions."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -9,9 +9,9 @@
 
 from .. import utilities
 from ...abstract_osid.authorization import sessions as abc_authorization_sessions
+from ..osid import sessions as osid_sessions
 from ..osid.sessions import OsidSession
 from dlkit.abstract_osid.osid import errors
-from dlkit.gstudio.osid import sessions as osid_sessions
 
 
 

@@ -1,4 +1,4 @@
-"""Stub implementations of proxy records."""
+"""GStudio implementations of proxy records."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -9,7 +9,7 @@
 
 from .. import utilities
 from ...abstract_osid.proxy import records as abc_proxy_records
-from dlkit.gstudio.osid import records as osid_records
+from ..osid import records as osid_records
 
 
 

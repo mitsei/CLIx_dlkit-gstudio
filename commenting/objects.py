@@ -1,4 +1,4 @@
-"""Stub implementations of commenting objects."""
+"""GStudio implementations of commenting objects."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -18,12 +18,12 @@ import importlib
 from . import default_mdata
 from .. import utilities
 from ...abstract_osid.commenting import objects as abc_commenting_objects
+from ..osid import objects as osid_objects
 from ..osid.metadata import Metadata
 from ..primitives import Id
 from ..utilities import get_registry
 from ..utilities import update_display_text_defaults
 from dlkit.abstract_osid.osid import errors
-from dlkit.gstudio.osid import objects as osid_objects
 from dlkit.primordium.id.primitives import Id
 
 
@@ -205,7 +205,10 @@ class CommentForm(abc_commenting_objects.CommentForm, osid_objects.OsidRelations
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['text'])
+        # metadata.update({'existing_text_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     text_metadata = property(fget=get_text_metadata)
 
@@ -241,7 +244,10 @@ class CommentForm(abc_commenting_objects.CommentForm, osid_objects.OsidRelations
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['rating'])
+        # metadata.update({'existing_rating_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     rating_metadata = property(fget=get_rating_metadata)
 

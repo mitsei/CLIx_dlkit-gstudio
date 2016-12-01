@@ -1,4 +1,4 @@
-"""Stub implementations of resource searches."""
+"""GStudio implementations of resource searches."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -10,10 +10,10 @@
 from . import objects
 from .. import utilities
 from ...abstract_osid.resource import searches as abc_resource_searches
+from ..osid import searches as osid_searches
 from ..primitives import Id
 from ..utilities import get_registry
 from dlkit.abstract_osid.osid import errors
-from dlkit.gstudio.osid import searches as osid_searches
 from dlkit.mongo.osid import searches as osid_searches
 
 

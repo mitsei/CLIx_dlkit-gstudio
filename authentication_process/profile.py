@@ -17,6 +17,6 @@ DISPLAYNAME = 'GStudio authentication.process'
 
 DESCRIPTION = 'GStudio based authentication.process implementation'
 
-VERSIONCOMPONENTS = [0, 1, 9]
+VERSIONCOMPONENTS = [0, 1, 15]
 
 RELEASEDATE = "2016-11-30"

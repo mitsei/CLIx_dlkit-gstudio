@@ -1,4 +1,4 @@
-"""Stub implementations of repository objects."""
+"""GStudio implementations of repository objects."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -18,13 +18,13 @@ import importlib
 from . import default_mdata
 from .. import utilities
 from ...abstract_osid.repository import objects as abc_repository_objects
+from ..osid import markers as osid_markers
+from ..osid import objects as osid_objects
 from ..osid.metadata import Metadata
 from ..primitives import Id
 from ..utilities import get_registry
 from ..utilities import update_display_text_defaults
 from dlkit.abstract_osid.osid import errors
-from dlkit.gstudio.osid import markers as osid_markers
-from dlkit.gstudio.osid import objects as osid_objects
 from dlkit.primordium.id.primitives import Id
 
 
@@ -512,7 +512,10 @@ class AssetForm(abc_repository_objects.AssetForm, osid_objects.OsidObjectForm, o
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['title'])
+        # metadata.update({'existing_title_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     title_metadata = property(fget=get_title_metadata)
 
@@ -548,7 +551,10 @@ class AssetForm(abc_repository_objects.AssetForm, osid_objects.OsidObjectForm, o
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['public_domain'])
+        # metadata.update({'existing_public_domain_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     public_domain_metadata = property(fget=get_public_domain_metadata)
 
@@ -582,7 +588,10 @@ class AssetForm(abc_repository_objects.AssetForm, osid_objects.OsidObjectForm, o
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['copyright'])
+        # metadata.update({'existing_copyright_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     copyright_metadata = property(fget=get_copyright_metadata)
 
@@ -619,7 +628,10 @@ class AssetForm(abc_repository_objects.AssetForm, osid_objects.OsidObjectForm, o
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['copyright_registration'])
+        # metadata.update({'existing_copyright_registration_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     copyright_registration_metadata = property(fget=get_copyright_registration_metadata)
 
@@ -656,7 +668,10 @@ class AssetForm(abc_repository_objects.AssetForm, osid_objects.OsidObjectForm, o
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['distribute_verbatim'])
+        # metadata.update({'existing_distribute_verbatim_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     distribute_verbatim_metadata = property(fget=get_distribute_verbatim_metadata)
 
@@ -693,7 +708,10 @@ class AssetForm(abc_repository_objects.AssetForm, osid_objects.OsidObjectForm, o
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['distribute_alterations'])
+        # metadata.update({'existing_distribute_alterations_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     distribute_alterations_metadata = property(fget=get_distribute_alterations_metadata)
 
@@ -732,7 +750,10 @@ class AssetForm(abc_repository_objects.AssetForm, osid_objects.OsidObjectForm, o
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['distribute_compositions'])
+        # metadata.update({'existing_distribute_compositions_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     distribute_compositions_metadata = property(fget=get_distribute_compositions_metadata)
 
@@ -770,7 +791,10 @@ class AssetForm(abc_repository_objects.AssetForm, osid_objects.OsidObjectForm, o
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['source'])
+        # metadata.update({'existing_source_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     source_metadata = property(fget=get_source_metadata)
 
@@ -842,7 +866,10 @@ class AssetForm(abc_repository_objects.AssetForm, osid_objects.OsidObjectForm, o
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['created_date'])
+        # metadata.update({'existing_created_date_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     created_date_metadata = property(fget=get_created_date_metadata)
 
@@ -879,7 +906,10 @@ class AssetForm(abc_repository_objects.AssetForm, osid_objects.OsidObjectForm, o
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['published'])
+        # metadata.update({'existing_published_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     published_metadata = property(fget=get_published_metadata)
 
@@ -913,7 +943,10 @@ class AssetForm(abc_repository_objects.AssetForm, osid_objects.OsidObjectForm, o
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['published_date'])
+        # metadata.update({'existing_published_date_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     published_date_metadata = property(fget=get_published_date_metadata)
 
@@ -950,7 +983,10 @@ class AssetForm(abc_repository_objects.AssetForm, osid_objects.OsidObjectForm, o
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['principal_credit_string'])
+        # metadata.update({'existing_principal_credit_string_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     principal_credit_string_metadata = property(fget=get_principal_credit_string_metadata)
 
@@ -986,7 +1022,10 @@ class AssetForm(abc_repository_objects.AssetForm, osid_objects.OsidObjectForm, o
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['composition'])
+        # metadata.update({'existing_composition_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     composition_metadata = property(fget=get_composition_metadata)
 
@@ -1259,7 +1298,10 @@ class AssetContentForm(abc_repository_objects.AssetContentForm, osid_objects.Osi
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['accessibility_type'])
+        # metadata.update({'existing_accessibility_type_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     accessibility_type_metadata = property(fget=get_accessibility_type_metadata)
 
@@ -1311,7 +1353,10 @@ class AssetContentForm(abc_repository_objects.AssetContentForm, osid_objects.Osi
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['data'])
+        # metadata.update({'existing_data_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     data_metadata = property(fget=get_data_metadata)
 
@@ -1347,7 +1392,10 @@ class AssetContentForm(abc_repository_objects.AssetContentForm, osid_objects.Osi
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['url'])
+        # metadata.update({'existing_url_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     url_metadata = property(fget=get_url_metadata)
 

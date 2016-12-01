@@ -1,4 +1,4 @@
-"""Stub implementations of type objects."""
+"""GStudio implementations of type objects."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -9,8 +9,8 @@
 
 from .. import utilities
 from ...abstract_osid.type import objects as abc_type_objects
+from ..osid import objects as osid_objects
 from dlkit.abstract_osid.osid import errors
-from dlkit.gstudio.osid import objects as osid_objects
 from dlkit.primordium.id.primitives import Id
 
 

@@ -1,4 +1,4 @@
-"""Stub implementations of assessment.authoring queries."""
+"""GStudio implementations of assessment.authoring queries."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -9,10 +9,10 @@
 
 from .. import utilities
 from ...abstract_osid.assessment_authoring import queries as abc_assessment_authoring_queries
+from ..osid import queries as osid_queries
 from ..primitives import Id
 from ..utilities import get_registry
 from dlkit.abstract_osid.osid import errors
-from dlkit.gstudio.osid import queries as osid_queries
 
 
 

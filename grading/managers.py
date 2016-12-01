@@ -1,4 +1,4 @@
-"""Stub implementations of grading managers."""
+"""GStudio implementations of grading managers."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -9,11 +9,11 @@
 
 from . import sessions
 from .. import utilities
+from ..osid import managers as osid_managers
 from ..primitives import Type
 from ..type.objects import TypeList
 from ..utilities import get_registry
 from dlkit.abstract_osid.osid import errors
-from dlkit.gstudio.osid import managers as osid_managers
 from dlkit.manager_impls.grading import managers as grading_managers
 
 

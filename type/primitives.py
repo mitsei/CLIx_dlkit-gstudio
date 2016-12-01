@@ -1,4 +1,4 @@
-"""Stub implementations of type primitives."""
+"""GStudio implementations of type primitives."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -9,7 +9,7 @@
 
 from .. import utilities
 from ...abstract_osid.type import primitives as abc_type_primitives
-from dlkit.gstudio.osid import markers as osid_markers
+from ..osid import markers as osid_markers
 
 
 

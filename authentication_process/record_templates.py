@@ -1,4 +1,4 @@
-"""Stub implementations of authentication.process records."""
+"""GStudio implementations of authentication.process records."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -9,7 +9,7 @@
 
 from .. import utilities
 from ...abstract_osid.authentication_process import records as abc_authentication_process_records
-from dlkit.gstudio.osid import records as osid_records
+from ..osid import records as osid_records
 
 
 

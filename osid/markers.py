@@ -1,4 +1,4 @@
-"""Stub implementations of osid markers."""
+"""GStudio implementations of osid markers."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification

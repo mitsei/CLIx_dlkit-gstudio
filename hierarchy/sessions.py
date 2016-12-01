@@ -1,4 +1,4 @@
-"""Stub implementations of hierarchy sessions."""
+"""GStudio implementations of hierarchy sessions."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -12,12 +12,12 @@ from .. import utilities
 from ...abstract_osid.hierarchy import sessions as abc_hierarchy_sessions
 from ...abstract_osid.id.primitives import Id as ABCId
 from ..id.objects import IdList
+from ..osid import sessions as osid_sessions
 from ..osid.sessions import OsidSession
 from ..primitives import Id
 from ..primitives import Type
 from ..utilities import MongoClientValidated
 from dlkit.abstract_osid.osid import errors
-from dlkit.gstudio.osid import sessions as osid_sessions
 
 
 

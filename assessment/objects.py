@@ -1,4 +1,4 @@
-"""Stub implementations of assessment objects."""
+"""GStudio implementations of assessment objects."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -18,13 +18,13 @@ import importlib
 from . import default_mdata
 from .. import utilities
 from ...abstract_osid.assessment import objects as abc_assessment_objects
+from ..osid import markers as osid_markers
+from ..osid import objects as osid_objects
 from ..osid.metadata import Metadata
 from ..primitives import Id
 from ..utilities import get_registry
 from ..utilities import update_display_text_defaults
 from dlkit.abstract_osid.osid import errors
-from dlkit.gstudio.osid import markers as osid_markers
-from dlkit.gstudio.osid import objects as osid_objects
 from dlkit.primordium.id.primitives import Id
 
 
@@ -676,7 +676,10 @@ class AssessmentForm(abc_assessment_objects.AssessmentForm, osid_objects.OsidObj
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['level'])
+        # metadata.update({'existing_level_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     level_metadata = property(fget=get_level_metadata)
 
@@ -712,7 +715,10 @@ class AssessmentForm(abc_assessment_objects.AssessmentForm, osid_objects.OsidObj
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['rubric'])
+        # metadata.update({'existing_rubric_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     rubric_metadata = property(fget=get_rubric_metadata)
 
@@ -1138,7 +1144,10 @@ class AssessmentOfferedForm(abc_assessment_objects.AssessmentOfferedForm, osid_o
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['level'])
+        # metadata.update({'existing_level_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     level_metadata = property(fget=get_level_metadata)
 
@@ -1173,7 +1182,10 @@ class AssessmentOfferedForm(abc_assessment_objects.AssessmentOfferedForm, osid_o
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['items_sequential'])
+        # metadata.update({'existing_items_sequential_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     items_sequential_metadata = property(fget=get_items_sequential_metadata)
 
@@ -1210,7 +1222,10 @@ class AssessmentOfferedForm(abc_assessment_objects.AssessmentOfferedForm, osid_o
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['items_shuffled'])
+        # metadata.update({'existing_items_shuffled_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     items_shuffled_metadata = property(fget=get_items_shuffled_metadata)
 
@@ -1249,7 +1264,10 @@ class AssessmentOfferedForm(abc_assessment_objects.AssessmentOfferedForm, osid_o
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['start_time'])
+        # metadata.update({'existing_start_time_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     start_time_metadata = property(fget=get_start_time_metadata)
 
@@ -1284,7 +1302,10 @@ class AssessmentOfferedForm(abc_assessment_objects.AssessmentOfferedForm, osid_o
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['deadline'])
+        # metadata.update({'existing_deadline_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     deadline_metadata = property(fget=get_deadline_metadata)
 
@@ -1319,7 +1340,10 @@ class AssessmentOfferedForm(abc_assessment_objects.AssessmentOfferedForm, osid_o
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['duration'])
+        # metadata.update({'existing_duration_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     duration_metadata = property(fget=get_duration_metadata)
 
@@ -1355,7 +1379,10 @@ class AssessmentOfferedForm(abc_assessment_objects.AssessmentOfferedForm, osid_o
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['score_system'])
+        # metadata.update({'existing_score_system_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     score_system_metadata = property(fget=get_score_system_metadata)
 
@@ -1390,7 +1417,10 @@ class AssessmentOfferedForm(abc_assessment_objects.AssessmentOfferedForm, osid_o
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['grade_system'])
+        # metadata.update({'existing_grade_system_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     grade_system_metadata = property(fget=get_grade_system_metadata)
 
@@ -1830,7 +1860,10 @@ class AssessmentTakenForm(abc_assessment_objects.AssessmentTakenForm, osid_objec
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['taker'])
+        # metadata.update({'existing_taker_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     taker_metadata = property(fget=get_taker_metadata)
 

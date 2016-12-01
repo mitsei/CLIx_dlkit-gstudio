@@ -1,4 +1,4 @@
-"""Stub implementations of learning objects."""
+"""GStudio implementations of learning objects."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -18,13 +18,13 @@ import importlib
 from . import default_mdata
 from .. import utilities
 from ...abstract_osid.learning import objects as abc_learning_objects
+from ..osid import markers as osid_markers
+from ..osid import objects as osid_objects
 from ..osid.metadata import Metadata
 from ..primitives import Id
 from ..utilities import get_registry
 from ..utilities import update_display_text_defaults
 from dlkit.abstract_osid.osid import errors
-from dlkit.gstudio.osid import markers as osid_markers
-from dlkit.gstudio.osid import objects as osid_objects
 from dlkit.primordium.id.primitives import Id
 
 
@@ -208,7 +208,10 @@ class ObjectiveForm(abc_learning_objects.ObjectiveForm, osid_objects.OsidObjectF
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['assessment'])
+        # metadata.update({'existing_assessment_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     assessment_metadata = property(fget=get_assessment_metadata)
 
@@ -244,7 +247,10 @@ class ObjectiveForm(abc_learning_objects.ObjectiveForm, osid_objects.OsidObjectF
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['knowledge_category'])
+        # metadata.update({'existing_knowledge_category_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     knowledge_category_metadata = property(fget=get_knowledge_category_metadata)
 
@@ -280,7 +286,10 @@ class ObjectiveForm(abc_learning_objects.ObjectiveForm, osid_objects.OsidObjectF
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['cognitive_process'])
+        # metadata.update({'existing_cognitive_process_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     cognitive_process_metadata = property(fget=get_cognitive_process_metadata)
 
@@ -1046,7 +1055,10 @@ class ProficiencyForm(abc_learning_objects.ProficiencyForm, osid_objects.OsidRel
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['completion'])
+        # metadata.update({'existing_completion_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     completion_metadata = property(fget=get_completion_metadata)
 
@@ -1094,7 +1106,10 @@ class ProficiencyForm(abc_learning_objects.ProficiencyForm, osid_objects.OsidRel
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['level'])
+        # metadata.update({'existing_level_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     level_metadata = property(fget=get_level_metadata)
 

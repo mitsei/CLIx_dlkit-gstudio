@@ -1,4 +1,4 @@
-"""Stub implementations of hierarchy queries."""
+"""GStudio implementations of hierarchy queries."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -10,10 +10,10 @@
 from .. import utilities
 from ...abstract_osid.hierarchy import queries as abc_hierarchy_queries
 from ..id.objects import IdList
+from ..osid import queries as osid_queries
 from ..osid.osid_errors import Unimplemented
 from ..primitives import Id
 from ..utilities import get_registry
-from dlkit.gstudio.osid import queries as osid_queries
 
 
 

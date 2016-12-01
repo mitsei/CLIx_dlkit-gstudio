@@ -1,4 +1,4 @@
-"""Stub implementations of resource objects."""
+"""GStudio implementations of resource objects."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -18,12 +18,12 @@ import importlib
 from . import default_mdata
 from .. import utilities
 from ...abstract_osid.resource import objects as abc_resource_objects
+from ..osid import objects as osid_objects
 from ..osid.metadata import Metadata
 from ..primitives import Id
 from ..utilities import get_registry
 from ..utilities import update_display_text_defaults
 from dlkit.abstract_osid.osid import errors
-from dlkit.gstudio.osid import objects as osid_objects
 from dlkit.primordium.id.primitives import Id
 
 
@@ -177,7 +177,10 @@ class ResourceForm(abc_resource_objects.ResourceForm, osid_objects.OsidObjectFor
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['group'])
+        # metadata.update({'existing_group_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     group_metadata = property(fget=get_group_metadata)
 
@@ -213,7 +216,10 @@ class ResourceForm(abc_resource_objects.ResourceForm, osid_objects.OsidObjectFor
         *compliance: mandatory -- This method must be implemented.*
 
         """
-        raise errors.Unimplemented()
+        # Implemented from template for osid.resource.ResourceForm.get_group_metadata_template
+        metadata = dict(self._mdata['avatar'])
+        # metadata.update({'existing_avatar_values': [THE EXISTING VALUE OR VALUES IN A LIST]})
+        return Metadata(**metadata)
 
     avatar_metadata = property(fget=get_avatar_metadata)
 

@@ -1,4 +1,4 @@
-"""Stub implementations of authentication queries."""
+"""GStudio implementations of authentication queries."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -9,10 +9,10 @@
 
 from .. import utilities
 from ...abstract_osid.authentication import queries as abc_authentication_queries
+from ..osid import queries as osid_queries
 from ..primitives import Id
 from ..utilities import get_registry
 from dlkit.abstract_osid.osid import errors
-from dlkit.gstudio.osid import queries as osid_queries
 
 
 

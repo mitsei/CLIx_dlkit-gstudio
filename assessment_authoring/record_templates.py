@@ -1,4 +1,4 @@
-"""Stub implementations of assessment.authoring records."""
+"""GStudio implementations of assessment.authoring records."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -9,7 +9,7 @@
 
 from .. import utilities
 from ...abstract_osid.assessment_authoring import records as abc_assessment_authoring_records
-from dlkit.gstudio.osid import records as osid_records
+from ..osid import records as osid_records
 
 
 

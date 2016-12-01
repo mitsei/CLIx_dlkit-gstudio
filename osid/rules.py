@@ -1,4 +1,4 @@
-"""Stub implementations of osid rules."""
+"""GStudio implementations of osid rules."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -9,7 +9,7 @@
 
 from .. import utilities
 from ...abstract_osid.osid import rules as abc_osid_rules
-from dlkit.gstudio.osid import markers as osid_markers
+from ..osid import markers as osid_markers
 
 
 

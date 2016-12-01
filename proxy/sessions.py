@@ -1,4 +1,4 @@
-"""Stub implementations of proxy sessions."""
+"""GStudio implementations of proxy sessions."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -11,8 +11,8 @@ from . import rules
 from .. import utilities
 from ...abstract_osid.proxy import sessions as abc_proxy_sessions
 from ..authentication_process.objects import Authentication
+from ..osid import sessions as osid_sessions
 from dlkit.abstract_osid.osid import errors
-from dlkit.gstudio.osid import sessions as osid_sessions
 
 
 

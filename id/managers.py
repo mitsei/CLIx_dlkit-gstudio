@@ -1,4 +1,4 @@
-"""Stub implementations of id managers."""
+"""GStudio implementations of id managers."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -8,7 +8,7 @@
 
 
 from .. import utilities
-from dlkit.gstudio.osid import managers as osid_managers
+from ..osid import managers as osid_managers
 from dlkit.manager_impls.id import managers as id_managers
 
 

@@ -1,4 +1,4 @@
-"""Stub implementations of id primitives."""
+"""GStudio implementations of id primitives."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -9,7 +9,7 @@
 
 from .. import utilities
 from ...abstract_osid.id import primitives as abc_id_primitives
-from dlkit.gstudio.osid import markers as osid_markers
+from ..osid import markers as osid_markers
 
 
 

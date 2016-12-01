@@ -17,6 +17,6 @@ DISPLAYNAME = 'GStudio learning'
 
 DESCRIPTION = 'GStudio based learning implementation'
 
-VERSIONCOMPONENTS = [0, 1, 5]
+VERSIONCOMPONENTS = [0, 1, 8]
 
 RELEASEDATE = "2016-11-30"

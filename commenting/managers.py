@@ -1,4 +1,4 @@
-"""Stub implementations of commenting managers."""
+"""GStudio implementations of commenting managers."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -9,11 +9,11 @@
 
 from . import sessions
 from .. import utilities
+from ..osid import managers as osid_managers
 from ..primitives import Type
 from ..type.objects import TypeList
 from ..utilities import get_registry
 from dlkit.abstract_osid.osid import errors
-from dlkit.gstudio.osid import managers as osid_managers
 from dlkit.manager_impls.commenting import managers as commenting_managers
 
 

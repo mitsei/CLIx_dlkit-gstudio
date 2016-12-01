@@ -1,4 +1,4 @@
-"""Stub implementations of grading searches."""
+"""GStudio implementations of grading searches."""
 
 # pylint: disable=too-many-public-methods,too-few-public-methods
 #     Number of methods are defined in specification
@@ -9,7 +9,7 @@
 
 from .. import utilities
 from ...abstract_osid.grading import searches as abc_grading_searches
-from dlkit.gstudio.osid import searches as osid_searches
+from ..osid import searches as osid_searches
 
 
 
